@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors</title>
+</head>
+ 
+<script>
+
+function computerPlay() {
+        let num = Math.floor(Math.random() * 3);
+        if(num === 0) {
+            return 'rock';
+        }
+        else if (num === 1) {
+            return 'paper';
+        }
+        else {
+            return 'scissors';
+        }
+}
+
+console.log(computerPlay());
+
+let choice = computerPlay();
+
+let userPlay = prompt("Choose rock, paper, or scissors.")
+
+playGame = function(userPlay, computerPlay) { 
+    if (userPlay==='rock' && choice==='scissors') {
+        return 'You win!';
+    }
+    else if (userPlay==='paper' && choice==='rock') {
+        return 'You win!';
+    }
+    else if (userPlay==='scissors' && choice==='paper') {
+        return 'You win!';
+    }
+    else if (userPlay==='rock' && choice==='rock') {
+        return 'You tied!';
+    }
+    else if (userPlay==='paper' && choice==='paper') {
+        return 'You tied!';
+    }
+    else if (userPlay==='scissors' && choice==='scissors') {
+        return 'You tied!';
+    }
+    else if (userPlay==='rock' && choice==='paper') {
+        return 'You lose!';
+    }
+    else if (userPlay==='paper' && choice==='scissors') {
+        return 'You lose!';
+    }
+    else if (userPlay==='scissors' && choice==='rock') {
+        return 'You lose!';
+    }
+}   
+console.log(playGame(userPlay, computerPlay));
+</script>
+
+</html>
